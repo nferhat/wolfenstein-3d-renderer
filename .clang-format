@@ -1,0 +1,51 @@
+# a config for clang-format to output stuff like rustfmt does
+# I dont think I needed to include all these options but this works fine
+Language: Cpp
+BasedOnStyle: LLVM
+
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+ColumnLimit: 100
+ContinuationIndentWidth: 4
+
+# Braces: always attached, `} else {` on one line, like Rust
+BreakBeforeBraces: Attach
+InsertBraces: false # I like the tersity
+AllowShortIfStatementsOnASingleLine: Always
+AllowShortLoopsOnASingleLine: true
+AllowShortBlocksOnASingleLine: Never
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: Empty
+AllowShortEnumsOnASingleLine: false
+IndentCaseLabels: true
+IndentGotoLabels: false
+
+AlignAfterOpenBracket: BlockIndent
+BinPackArguments: false
+BinPackParameters: false
+AllowAllArgumentsOnNextLine: false
+AllowAllParametersOfDeclarationOnNextLine: false
+PenaltyBreakBeforeFirstCallParameter: 0
+PenaltyReturnTypeOnItsOwnLine: 1000
+AlwaysBreakAfterReturnType: None
+BreakBeforeBinaryOperators: All
+BreakBeforeTernaryOperators: true
+AlignOperands: DontAlign
+BreakAfterReturnType: None
+
+PointerAlignment: Left # preference, C is Type name, rust is name: Type
+DerivePointerAlignment: false
+SpaceAfterCStyleCast: false
+SpaceBeforeParens: ControlStatements
+SpaceBeforeAssignmentOperators: true
+SpacesInParentheses: false
+SpacesInSquareBrackets: false
+SpacesBeforeTrailingComments: 2
+Cpp11BracedListStyle: false
+SpaceInEmptyBlock: false
+
+# Blank lines & comments
+MaxEmptyLinesToKeep: 1
+KeepEmptyLinesAtTheStartOfBlocks: false
+ReflowComments: true
